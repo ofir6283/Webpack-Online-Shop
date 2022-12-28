@@ -6,7 +6,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|svg|jpg|gif) $/,
+                test: /\.(png|svg|jpg|gif|jfif) $/,
                 use: {
                     loader: "file-loader"
                 }
@@ -18,7 +18,7 @@ module.exports = {
                     "css-loader"
                 ]
             },
-            
+
             {
                 test: /\.js$/,
                 exclude: "/node_modules/",
@@ -31,7 +31,7 @@ module.exports = {
                 use: [
                     {
                         loader: "html-loader",
-                        options: {minimize: true}
+                        options: { minimize: true }
                     }
                 ],
             }
@@ -47,5 +47,5 @@ module.exports = {
             chunkFilename: "[id].css"
         })
     ]
-  
+
 }

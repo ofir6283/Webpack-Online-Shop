@@ -1,4 +1,7 @@
 import { items } from './items';
-import "./styles/mainStyles.css"
+import { initialize } from './init';
+import "./styles/mainStyles.css";
+
 
 console.log(items);
+initialize();

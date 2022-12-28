@@ -7,7 +7,7 @@
 .main-container {
   display: flex;
   align-items: center;
-  gap: 35em;
+  gap: 15em;
 }
 .cart {
   margin-left: 5em;
@@ -17,6 +17,7 @@
 .catalog {
   display: grid;
   grid-template-columns: auto auto auto;
+  margin-right: 15em;
 }
 .shopping-cart-logo {
   margin-right: 40em;
@@ -40,4 +41,5 @@
 }
 .catalog-item {
   margin-left: 1em;
+  margin-right: 10em;
 }
