@@ -12,10 +12,11 @@ function buildProdCard(i) {
 
     let title = document.createElement('p');
     title.innerHTML = items[i].name;
-    title.setAttribute('style', 'size:0.5em')
+    title.setAttribute('style', 'size:0.5em;font-weight: bold;')
 
     let price = document.createElement('p');
     price.innerHTML = "price:" + items[i].price + " shmekels";
+    price.setAttribute('style', 'text-decoration: underline;');
 
     let productCountInput = document.createElement('input');
     productCountInput.placeholder = 'Ammount';
@@ -23,7 +24,7 @@ function buildProdCard(i) {
 
     let orderButton = document.createElement('button');
     orderButton.innerHTML = "add to cart";
-    orderButton.setAttribute('style', 'margin-top: 2em;');
+    orderButton.setAttribute('style', 'margin-top: 2em;text-align:center;border:none;border-radius: 5px;cursor: pointer;display: inline-block;text-align: center;color:#A9A9A9;border-color: #f8f8ff;');
 
     orderButton.addEventListener('click', () => {
         console.log("INSIDE ADD EVENT");
@@ -40,6 +41,7 @@ function buildProdCard(i) {
         title.setAttribute('style', 'size:0.5em')
 
         let price = document.createElement('p');
+        price.setAttribute('style', 'text-decoration: underline');
         price.innerHTML = "price:" + items[i].price + " shmekels";
 
 
@@ -47,13 +49,10 @@ function buildProdCard(i) {
 
         let removeBtn = document.createElement('button');
         removeBtn.innerHTML = "Remove";
-        removeBtn.setAttribute('style', 'margin-top: 2em;width:4.3em;height:2em;align:center');
+        removeBtn.setAttribute('style', 'margin-top: 2em;width:4.3em;height:2em;text-align:center;border:none;border-radius: 5px;cursor: pointer;display: inline-block;text-align: center;color:#A9A9A9;border-color: #f8f8ff;');
 
         removeBtn.addEventListener('click', () => {
             removeFromCart(cartDiv);
-            // let prodCard = items.indexOf(items[i].id);
-            // items[i].splice(prodCard, 1);
-            // cartDiv.removeChild(prodCard);
         });
 
         let totalProd = document.createElement('p');
@@ -68,9 +67,6 @@ function buildProdCard(i) {
         }
 
     });
-
-
-
 
     if (productCountInput.value != NaN) {
         div.appendChild(img);
@@ -90,6 +86,10 @@ function calcItemPrice(i, prodAmmount, prodPrice) {
 }
 function removeFromCart(cartDiv) {
     cartDiv.remove();
+}
+
+function searchByCatagory() {
+    //FIll
 }
 
 export { buildProdCard };
