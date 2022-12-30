@@ -1,10 +1,10 @@
 
 import { items } from "./items";
 
-function buildProdCard(i) {
+function buildProdCard(i, relevantProd) {
     let div = document.createElement('div');
     div.setAttribute('style', 'border: 0.2em solid black;margin:1em;font-family:Times New Roman-serif;height: 15em;width: 8em;border-radius: 15px; text-align: center;background-color: lightgreen;');
-    // div.classList.add('catalog-item');
+
     let img = document.createElement('img');
     img.setAttribute('style', 'width:3em', 'height:3em');
     img.src = items[i].image;
