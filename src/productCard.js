@@ -26,6 +26,7 @@ function buildProdCard(i) {
     orderButton.innerHTML = "add to cart";
     orderButton.setAttribute('style', 'margin-top: 2em;text-align:center;border:none;border-radius: 5px;cursor: pointer;display: inline-block;text-align: center;color:#A9A9A9;border-color: #f8f8ff;');
 
+    // Order Button logic
     orderButton.addEventListener('click', () => {
         console.log("INSIDE ADD EVENT");
         let cart = document.getElementById('cart');
@@ -44,12 +45,15 @@ function buildProdCard(i) {
         price.setAttribute('style', 'text-decoration: underline');
         price.innerHTML = "price:" + items[i].price + " shmekels";
 
-
+        let itemCatagory = document.createElement('p');
 
 
         let removeBtn = document.createElement('button');
         removeBtn.innerHTML = "Remove";
         removeBtn.setAttribute('style', 'margin-top: 2em;width:4.3em;height:2em;text-align:center;border:none;border-radius: 5px;cursor: pointer;display: inline-block;text-align: center;color:#A9A9A9;border-color: #f8f8ff;');
+
+        // let totalCartPrice = document.createElement('p');
+        // totalCartPrice.innerHTML
 
         removeBtn.addEventListener('click', () => {
             removeFromCart(cartDiv);
@@ -89,7 +93,17 @@ function removeFromCart(cartDiv) {
 }
 
 function searchByCatagory() {
-    //FIll
+    // let catagory = document.getElementById("catagory");
+    let catagoryArray = items.map(() => {
+        if (items[i].catagory === itemCatagory) {
+            catagoryArray.push(items[i].catagory)
+        }
+    });
+    return catagoryArray;
+}
+
+function totalCartPrice() {
+
 }
 
 export { buildProdCard };
